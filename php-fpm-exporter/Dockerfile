@@ -10,6 +10,7 @@ COPY php-fpm_exporter_${VERSION}_linux_amd64 /php-fpm_exporter
 
 COPY start-fpm-exporter.sh /start-fpm-exporter.sh
 
+RUN chmod +x /php-fpm_exporter
 RUN chmod +x /start-fpm-exporter.sh
 
 EXPOSE 9253
