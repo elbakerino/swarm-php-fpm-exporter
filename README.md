@@ -75,7 +75,7 @@ scrape_configs:
             port: 9253
 ```
 
-Example `docker-compose.yml` of swarm, the `SCRAPE_SERVICE` env variable allows to specify the service that is scraped:
+Example `docker-compose.yml` of swarm, the `SCRAPE_SERVICE` env variable allows to specify the scraped service:
 
 ```docker-compose
 version: "3.9"

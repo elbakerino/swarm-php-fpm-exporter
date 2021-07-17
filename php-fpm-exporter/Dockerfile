@@ -4,11 +4,13 @@ ARG BUILD_DATE
 ARG VCS_REF
 ENV VERSION 2.0.2
 
-COPY php-fpm_exporter_${VERSION}_linux_amd64 /php-fpm_exporter
-
 RUN apk add bind-tools
 
+COPY php-fpm_exporter_${VERSION}_linux_amd64 /php-fpm_exporter
+
 COPY start-fpm-exporter.sh /start-fpm-exporter.sh
+
+RUN chmod +x /start-fpm-exporter.sh
 
 EXPOSE 9253
 
